@@ -1267,7 +1267,11 @@
     <string name="use_location_summary">Use My Location for Google search results and other Google services</string>
     <!-- Message of dialog to user requesting use of location information -->
     <string name="use_location_warning_message">Do you want to allow Google to use location for improved search results and other services?</string>
-    <!-- Agree -->
+    <!-- Checkbox title for enforcing exposure policy -->
+    <string name="enforce_policy_title">Enforce exposure policy</string>
+    <!-- Checkbox summary for enforcing exposure policy -->
+    <string name="enforce_policy_summary">Enable or disable enforcement of the current policy for protecting the exposure of privacy-sensitive data</string>
+     <!-- Agree -->
     <string name="agree">Agree</string>
     <!-- Disagree -->
     <string name="disagree">Disagree</string>
@@ -2184,6 +2188,8 @@ found in the list of installed applications.</string>
     <string name="backup_erase_dialog_title">Settings backup</string>
     <!-- Dialog title for confirmation to erase backup data from server -->
     <string name="backup_erase_dialog_message">Are you sure you want to stop backing up your settings and erase all copies on Google servers?</string>
+    <!-- Policy settings section title -->
+    <string name="policy_section_title">Policy</string>
 
     <!-- Name to assign to a Network Access Point that was saved without a name -->
     <string name="untitled_apn">Untitled</string>

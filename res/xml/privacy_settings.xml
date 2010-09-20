@@ -47,4 +47,14 @@
         </PreferenceScreen>
     </PreferenceCategory>
 
+    <PreferenceCategory android:key="policy_category"
+            android:title="@string/policy_section_title">
+        <!-- Enable/disable enforcement of exposure policy -->
+        <CheckBoxPreference
+                android:key="enforce_policy"
+                android:title="@string/enforce_policy_title"
+                android:persistent="false"
+                android:summary="@string/enforce_policy_summary"/>
+    </PreferenceCategory>
+
 </PreferenceScreen>

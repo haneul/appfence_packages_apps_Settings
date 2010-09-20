@@ -34,6 +34,8 @@ import android.preference.PreferenceScreen;
 import android.provider.Settings;
 import android.text.method.LinkMovementMethod;
 import android.widget.TextView;
+import dalvik.system.Taint;
+import android.widget.Toast;
 
 /**
  * Gesture lock pattern settings.
@@ -50,9 +52,11 @@ public class PrivacySettings extends PreferenceActivity implements
     private static final String SETTINGS_CATEGORY = "settings_category";
     private static final String USE_LOCATION = "use_location";
     private static final String BACKUP_SETTINGS = "backup_settings";
+    private static final String ENFORCE_POLICY = "enforce_policy";
     private static final String KEY_DONE_USE_LOCATION = "doneLocation";
     private CheckBoxPreference mUseLocation;
     private CheckBoxPreference mBackup;
+    private CheckBoxPreference mEnforcePolicy;
     private boolean mOkClicked;
     private Dialog mConfirmDialog;
 
@@ -67,6 +71,7 @@ public class PrivacySettings extends PreferenceActivity implements
 
         mUseLocation = (CheckBoxPreference) getPreferenceScreen().findPreference(USE_LOCATION);
         mBackup = (CheckBoxPreference) getPreferenceScreen().findPreference(BACKUP_SETTINGS);
+        mEnforcePolicy = (CheckBoxPreference) getPreferenceScreen().findPreference(ENFORCE_POLICY);
 
         // Vendor specific
         try {
@@ -122,6 +127,8 @@ public class PrivacySettings extends PreferenceActivity implements
             } else {
                 setBackupEnabled(true);
             }
+        } else if (preference == mEnforcePolicy) {
+            updateEnforcePolicy();
         }
 
         return false;
@@ -177,12 +184,30 @@ public class PrivacySettings extends PreferenceActivity implements
                 Settings.Secure.USE_LOCATION_FOR_SERVICES, 2) == 1);
         mBackup.setChecked(Settings.Secure.getInt(res,
                 Settings.Secure.BACKUP_ENABLED, 0) == 1);
+        boolean enforce = Taint.getEnforcePolicy();
+        Toast.makeText(PrivacySettings.this,
+                "From Taint.getEnforcePolicy() got: "+enforce,
+                Toast.LENGTH_SHORT).show();
+        mEnforcePolicy.setChecked(enforce);
     }
 
     private void updateUseLocation() {
         boolean use = mUseLocation.isChecked();
         Settings.Secure.putInt(getContentResolver(),
                 Settings.Secure.USE_LOCATION_FOR_SERVICES, use ? 1 : 0);
+    }
+
+    private void updateEnforcePolicy() {
+        boolean enforce = mEnforcePolicy.isChecked();
+        Taint.setEnforcePolicy(enforce);
+        Toast.makeText(PrivacySettings.this,
+                "Called setEnforcePolicy("+enforce+")",
+                Toast.LENGTH_SHORT).show();
+        //Settings.Secure.putInt(getContentResolver(),
+        //        Settings.Secure.ENFORCE_EXPOSURE_POLICY, enforce ? 1 : 0);
+        //Toast.makeText(PrivacySettings.this,
+        //        "Set Settings.Secure.ENFORCE_EXPOSURE_POLICY to "+enforce,
+        //        Toast.LENGTH_SHORT).show();
     }
 
     public void onClick(DialogInterface dialog, int which) {
