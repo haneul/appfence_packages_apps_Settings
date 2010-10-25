@@ -199,10 +199,14 @@ public class PrivacySettings extends PreferenceActivity implements
 
     private void updateEnforcePolicy() {
         boolean enforce = mEnforcePolicy.isChecked();
+        Toast.makeText(PrivacySettings.this,
+                "Calling setEnforcePolicy("+enforce+")",
+                Toast.LENGTH_SHORT).show();
         Taint.setEnforcePolicy(enforce);
         Toast.makeText(PrivacySettings.this,
                 "Called setEnforcePolicy("+enforce+")",
                 Toast.LENGTH_SHORT).show();
+        //TODO: store this setting somehow???
         //Settings.Secure.putInt(getContentResolver(),
         //        Settings.Secure.ENFORCE_EXPOSURE_POLICY, enforce ? 1 : 0);
         //Toast.makeText(PrivacySettings.this,
