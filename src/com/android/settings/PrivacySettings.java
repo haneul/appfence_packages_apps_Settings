@@ -197,6 +197,7 @@ public class PrivacySettings extends PreferenceActivity implements
                 Settings.Secure.USE_LOCATION_FOR_SERVICES, use ? 1 : 0);
     }
 
+    //phornyac
     private void updateEnforcePolicy() {
         boolean enforce = mEnforcePolicy.isChecked();
         Toast.makeText(PrivacySettings.this,
