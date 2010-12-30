@@ -200,9 +200,9 @@ public class PrivacySettings extends PreferenceActivity implements
     //phornyac
     private void updateEnforcePolicy() {
         boolean enforce = mEnforcePolicy.isChecked();
-        Toast.makeText(PrivacySettings.this,
-                "Calling setEnforcePolicy("+enforce+")",
-                Toast.LENGTH_SHORT).show();
+        //Toast.makeText(PrivacySettings.this,
+        //        "Calling setEnforcePolicy("+enforce+")",
+        //        Toast.LENGTH_SHORT).show();
         Taint.setEnforcePolicy(enforce);
         Toast.makeText(PrivacySettings.this,
                 "Called setEnforcePolicy("+enforce+")",
