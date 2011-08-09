@@ -55,6 +55,13 @@
                 android:title="@string/enforce_policy_title"
                 android:persistent="false"
                 android:summary="@string/enforce_policy_summary"/>
+        <PreferenceScreen
+                android:title="@string/shadow_title"
+                android:summary="@string/shadow_summary">
+            <intent android:action="android.intent.action.MAIN"
+                    android:targetPackage="com.android.settings"
+                    android:targetClass="com.android.settings.ShadowAppList" />
+        </PreferenceScreen>
     </PreferenceCategory>
 
 </PreferenceScreen>

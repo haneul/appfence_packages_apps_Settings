@@ -354,6 +354,30 @@
             </intent-filter>
         </activity>
 
+	<activity android:name="ShadowAppList"
+		android:label="@string/shadow_title"
+                android:configChanges="orientation|keyboardHidden"
+                android:clearTaskOnLaunch="true"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.VOICE_LAUNCH" />
+            </intent-filter>
+        </activity>
+
+		<activity android:name="ShadowPackageSetting"
+			android:label="@string/shadow_title"
+                android:configChanges="orientation|keyboardHidden"
+                android:clearTaskOnLaunch="true"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.VOICE_LAUNCH" />
+            </intent-filter>
+        </activity>
+
         <activity android:name="IccLockSettings" android:label="@string/sim_lock_settings"
                 android:process="com.android.phone">
             <intent-filter>

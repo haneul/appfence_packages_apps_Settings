@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+        <!-- Enable/disable enforcement of exposure policy -->
+        <CheckBoxPreference
+                android:key="shadow_imei"
+                android:title="@string/enforce_shadow_imei"
+                android:persistent="false"
+                android:summary="@string/enforce_summary_imei"/>
+        <CheckBoxPreference
+                android:key="shadow_phonenumber"
+                android:title="@string/enforce_shadow_phonenumber"
+                android:persistent="false"
+                android:summary="@string/enforce_summary_phonenumber"/>
+        <CheckBoxPreference
+                android:key="shadow_location"
+                android:title="@string/enforce_shadow_location"
+                android:persistent="false"
+                android:summary="@string/enforce_summary_location"/>
+        <CheckBoxPreference
+                android:key="shadow_contacts"
+                android:title="@string/enforce_shadow_contacts"
+                android:persistent="false"
+                android:summary="@string/enforce_summary_contacts"/>
+        <CheckBoxPreference
+                android:key="shadow_camera"
+                android:title="@string/enforce_shadow_camera"
+                android:persistent="false"
+                android:summary="@string/enforce_summary_camera"/>
+        <CheckBoxPreference
+                android:key="shadow_microphone"
+                android:title="@string/enforce_shadow_microphone"
+                android:persistent="false"
+                android:summary="@string/enforce_summary_microphone"/>
+        <CheckBoxPreference
+                android:key="shadow_account"
+                android:title="@string/enforce_shadow_account"
+                android:persistent="false"
+                android:summary="@string/enforce_summary_account"/>
+        <CheckBoxPreference
+                android:key="shadow_logs"
+                android:title="@string/enforce_shadow_logs"
+                android:persistent="false"
+                android:summary="@string/enforce_summary_logs"/>
+        <CheckBoxPreference
+                android:key="shadow_sms"
+                android:title="@string/enforce_shadow_sms"
+                android:persistent="false"
+                android:summary="@string/enforce_summary_sms"/>
+        <CheckBoxPreference
+                android:key="shadow_history"
+                android:title="@string/enforce_shadow_history"
+                android:persistent="false"
+                android:summary="@string/enforce_summary_history"/>
+        <CheckBoxPreference
+                android:key="shadow_calendar"
+                android:title="@string/enforce_shadow_calendar"
+                android:persistent="false"
+                android:summary="@string/enforce_summary_calendar"/>
+        <CheckBoxPreference
+                android:key="shadow_feeds"
+                android:title="@string/enforce_shadow_feeds"
+                android:persistent="false"
+                android:summary="@string/enforce_summary_feeds"/>
+
+</PreferenceScreen>

@@ -1271,7 +1271,47 @@
     <string name="enforce_policy_title">Enforce exposure policy</string>
     <!-- Checkbox summary for enforcing exposure policy -->
     <string name="enforce_policy_summary">Enable or disable enforcement of the current policy for protecting the exposure of privacy-sensitive data</string>
-     <!-- Agree -->
+    <!-- Shadow -->
+    <string name="shadow_title">Shadow</string>
+    <string name="shadow_summary">Per app setting for AppFence shadow</string>
+    <string name="shadow_empty">There is no installed package</string>
+
+    <string name="enforce_shadow_imei">IMEI:</string>
+    <string name="enforce_summary_imei">Provide a hashed IMEI insead of the unique device number</string>
+
+    <string name="enforce_shadow_phonenumber">Phonenumber:</string>
+    <string name="enforce_summary_phonenumber">Provide a fake phone number</string>
+
+    <string name="enforce_shadow_location">Location:</string>
+    <string name="enforce_summary_location">Provide fake location data</string>
+
+    <string name="enforce_shadow_camera">Camera:</string>
+    <string name="enforce_summary_camera">Provide an empty file when app is accessing a photo from the camera</string>
+
+    <string name="enforce_shadow_microphone">Mic:</string>
+    <string name="enforce_summary_microphone">Provide an empty file when app is accessing an audio file from the microphone</string>
+
+    <string name="enforce_shadow_contacts">Contacts:</string>
+    <string name="enforce_summary_contacts">Work as if contacts book is empty</string>
+
+    <string name="enforce_shadow_sms">SMS/MMS:</string>
+    <string name="enforce_summary_sms">Work as if there is no SMS/MMS message</string>
+
+    <string name="enforce_shadow_history">History/Bookmark:</string>
+    <string name="enforce_summary_history">Work as if browser history/bookmarks are empty</string>
+
+    <string name="enforce_shadow_calendar">Calendar:</string>
+    <string name="enforce_summary_calendar">Work as if calendar is empty</string>
+
+    <string name="enforce_shadow_feeds">Subscribed Feeds:</string>
+    <string name="enforce_summary_feeds">Work as if there is no subscribed feed</string>
+
+    <string name="enforce_shadow_logs">Logs:</string>
+    <string name="enforce_summary_logs">Work as if there is no log</string>
+
+    <string name="enforce_shadow_account">Account:</string>
+    <string name="enforce_summary_account">Work as if there is no such account</string>
+    <!-- Agree -->
     <string name="agree">Agree</string>
     <!-- Disagree -->
     <string name="disagree">Disagree</string>
@@ -2189,7 +2229,7 @@ found in the list of installed applications.</string>
     <!-- Dialog title for confirmation to erase backup data from server -->
     <string name="backup_erase_dialog_message">Are you sure you want to stop backing up your settings and erase all copies on Google servers?</string>
     <!-- Policy settings section title -->
-    <string name="policy_section_title">Policy</string>
+    <string name="policy_section_title">AppFence</string>
 
     <!-- Name to assign to a Network Access Point that was saved without a name -->
     <string name="untitled_apn">Untitled</string>
